@@ -1,0 +1,106 @@
+{
+  "UNKNOWN-ERROR":"Неизвестная ошибка",
+  "SERVER-UNAVAILABLE":"Сервер недоступен",
+  "ACCESS-DENIED":"Доступ запрещён",
+  "USER-NOT-FOUND":"Пользователь не найден",
+  "DELETE-YOUR-OWN-SESSION":"Удаление своей собственной сессии запрещено",
+  "SECRET-HEADER-NOT-FOUND":"Заголовок аутентификации не найден",
+  "USER-NOT-AUTHENTICATED":"Пользователь не аутентифицирован",
+  "WRONG-SECRET-TOKEN":"Неверное значение аутентификации",
+  "USER-HAS-ALREADY-REGISTERED":"Пользователь уже зарегистрирован",
+  "USER-IS-BANNED":"Доступ для пользователя закрыт",
+
+  "LOGIN-FORM": {
+    "TITLE": "Введите логин и пароль",
+    "LOGIN":"Логин",
+    "PASSWORD":"Пароль",
+    "SUBMIT":"Войти"
+  },
+  "MAIN-MENU":{
+    "LOGOUT":"Выйти",
+    "MENU":{
+      "FILE":{
+        "File":"Файл",
+        "Quit":"Выход"
+      },
+      "SCHEMES":{
+        "Schemes":"Схемы"
+      },
+      "SECURITY":{
+        "Security":"Защита",
+        "Users":"Пользователи",
+        "Sessions":"Сессии",
+        "Log":"Журнал событий"
+      },
+      "HELP":{
+        "Help":"Помощь",
+        "About":"О системе"
+      }
+    }
+  },
+  "USERS-FORM":{
+    "TITLE":"Таблица пользователей",
+    "USERNAME":"Логин",
+    "FIRSTNAME":"Имя",
+    "SURNAME":"Фамилия",
+    "SEARCH":"Поиск",
+    "NEW":"Добавить",
+    "OPEN":"Открыть",
+    "DELETE":"Удалить",
+    "UPDATE":"Обновить"
+  },
+  "USER-FORM":{
+    "TITLE":"Пользователь",
+    "USERNAME":"Имя пользователя",
+    "FIRSTNAME":"Имя",
+    "SURNAME":"Фамилия",
+    "PASSWORD":"Пароль",
+    "CONFIRM-PASSWORD":"Подтверждение пароля",
+    "THEMES":"Темы",
+    "LANGUAGE":"Предпочитаемый язык",
+    "BANNED":"Доступ закрыт",
+    "ADD":"Добавить",
+    "DELETE":"Удалить",
+    "ROLE":"Роль",
+    "OK":"ОК",
+    "CANCEL":"Отмена",
+    "PASSWORD-NOT-EQUALS":"Пароль не совпадает с подтверждением пароля"
+  },
+  "SESSIONS-FORM":{
+    "TITLE":"Монитор сессий",
+    "DELETE":"Удалить",
+    "UPDATE":"Обновить",
+    "USERNAME":"Логин",
+    "SEARCH":"Поиск",
+    "FIRSTNAME":"Имя",
+    "SURNAME":"Фамилия",
+    "SESSIONBEGIN":"Начало сессии",
+    "LASTACTIVITY":"Последняя активность"
+  },
+  "LOG-FORM":{
+    "TITLE":"Журнал событий",
+    "SEARCH":"Поиск",
+    "DATE":"Дата",
+    "MESSAGETYPE":"Тип сообщения",
+    "USERNAME":"Пользователь",
+    "EVENT":"Событие",
+    "STRUCTURE":"Структура данных",
+    "DATA":"Данные",
+    "MESSAGE":"Сообщение"
+  },
+  "SCHEMES-FORM":{
+    "TITLE":"Схемы",
+    "COLUMN-TITLE":"Наименование",
+    "SEARCH":"Поиск",
+    "NEW":"Добавить",
+    "OPEN":"Открыть",
+    "DELETE":"Удалить",
+    "UPDATE":"Обновить"
+  },
+  "SCHEME-FORM":{
+    "TITLE":"Схема",
+    "OK":"ОК",
+    "CANCEL":"Отмена",
+    "SCHEME-TITLE":"Наименование схемы"
+  }
+}

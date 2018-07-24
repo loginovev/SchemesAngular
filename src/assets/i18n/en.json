@@ -1,0 +1,104 @@
+{
+  "UNKNOWN-ERROR":"Unknown error",
+  "SERVER-UNAVAILABLE":"The server is unavailable",
+  "ACCESS-DENIED":"Access Denied",
+  "USER-NOT-FOUND":"Username not found",
+  "DELETE-YOUR-OWN-SESSION":"Deleting your own session is not allowed",
+  "SECRET-HEADER-NOT-FOUND":"Secret header is not found",
+  "USER-NOT-AUTHENTICATED":"User is not authenticated",
+  "WRONG-SECRET-TOKEN":"Wrong secret token",
+  "USER-HAS-ALREADY-REGISTERED":"User has already registered",
+  "USER-IS-BANNED":"User is banned",
+
+  "LOGIN-FORM": {
+    "TITLE": "Login with username and password",
+    "LOGIN":"Username",
+    "PASSWORD":"Password",
+    "SUBMIT":"Submit"
+  },
+  "MAIN-MENU":{
+    "LOGOUT":"Logout",
+    "MENU":{
+      "FILE":{
+        "File":"File",
+        "Quit":"Quit"
+      },
+      "SCHEMES":{
+        "Schemes":"Schemes"
+      },
+      "SECURITY":{
+        "Security":"Security",
+        "Users":"Users",
+        "Sessions":"Sessions",
+        "Log":"Event log"
+      },
+      "HELP":{
+        "Help":"Help",
+        "About":"About"
+      }
+    }
+  },
+  "USERS-FORM":{
+    "TITLE":"Table of users",
+    "USERNAME":"Username",
+    "FIRSTNAME":"First name",
+    "SURNAME":"Surname",
+    "SEARCH":"Search",
+    "NEW":"New",
+    "OPEN":"Open",
+    "DELETE":"Delete",
+    "UPDATE":"Update"
+  },
+  "USER-FORM":{
+    "TITLE":"User",
+    "USERNAME":"Username",
+    "FIRSTNAME":"First name",
+    "SURNAME":"Surname",
+    "PASSWORD":"Passsword",
+    "CONFIRM-PASSWORD":"Confirm password",
+    "THEMES":"Themes",
+    "LANGUAGE":"Language",
+    "BANNED":"Banned",
+    "ROLE":"Role",
+    "OK":"OK",
+    "CANCEL":"Cancel",
+    "PASSWORD-NOT-EQUALS":"The password is not equal with the confirm"
+  },
+  "SESSIONS-FORM":{
+    "TITLE":"Monitor of sessions",
+    "DELETE":"Delete",
+    "UPDATE":"Update",
+    "USERNAME":"Username",
+    "SEARCH":"Search",
+    "FIRSTNAME":"First name",
+    "SURNAME":"Surname",
+    "SESSIONBEGIN":"Session's begin",
+    "LASTACTIVITY":"Last activity"
+  },
+  "LOG-FORM":{
+    "TITLE":"Event log",
+    "SEARCH":"Search",
+    "DATE":"Date",
+    "MESSAGETYPE":"Message's type",
+    "USERNAME":"Username",
+    "EVENT":"Event",
+    "STRUCTURE":"Structure",
+    "DATA":"Data",
+    "MESSAGE":"Message"
+  },
+  "SCHEMES-FORM":{
+    "TITLE":"Schemes",
+    "COLUMN-TITLE":"Title",
+    "SEARCH":"Search",
+    "NEW":"New",
+    "OPEN":"Open",
+    "DELETE":"Delete",
+    "UPDATE":"Update"
+  },
+  "SCHEME-FORM":{
+    "TITLE":"Scheme",
+    "OK":"OK",
+    "CANCEL":"Cancel",
+    "SCHEME-TITLE":"Scheme's title"
+  }
+}
