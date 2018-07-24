@@ -1,2 +1,2 @@
-# SchemesAngular
+# Schemes
 Клиентская часть проекта Schemes
