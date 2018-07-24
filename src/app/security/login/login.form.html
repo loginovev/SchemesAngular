@@ -1,0 +1,47 @@
+<style>
+  .form-signin {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+  }
+  .form-login {
+    display: block;
+  }
+</style>
+
+<div class="form-signin">
+  <p-panel [header]="'LOGIN-FORM.TITLE' | translate" class = "form-login">
+    <table>
+      <tr>
+        <td>
+          <label for="inputUsername">{{'LOGIN-FORM.LOGIN' | translate }}:</label>
+        </td>
+        <td>
+          <input id = 'inputUsername' type="text" pInputText [(ngModel)]="username"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="inputPassword">{{'LOGIN-FORM.PASSWORD' | translate }}:</label>
+        </td>
+        <td>
+          <input id = 'inputPassword' type="password" pPassword [(ngModel)]="password" [feedback]="false"/>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td align="right">
+          <button pButton type="button" (click)="authenticate($event)" [label]="'LOGIN-FORM.SUBMIT' | translate"></button>
+        </td>
+      </tr>
+    </table>
+    <p-selectButton [options]="languages" [(ngModel)]="selectedLanguage" (onChange)="languageChange()"></p-selectButton>
+  </p-panel>
+</div>
+<p-growl [(value)]="msgs"></p-growl>

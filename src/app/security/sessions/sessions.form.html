@@ -1,0 +1,44 @@
+<p-panel [header]="'SESSIONS-FORM.TITLE' | translate">
+
+  <p-toolbar>
+
+    <div class="ui-toolbar-group-left">
+
+      <button pButton type="button" [label]="'SESSIONS-FORM.DELETE' | translate" icon="fa-remove" class="ui-button-success" (click)="deleteSession($event)"></button>
+      <i class="fa fa-bars"></i>
+      <button pButton type="button" [label]="'SESSIONS-FORM.UPDATE' | translate" icon="fa-refresh" class="ui-button-success" (click)="updateSessions()"></button>
+    </div>
+  </p-toolbar>
+
+
+  <p-dataTable
+    ngClass="ui-datatable"
+    [value]="sessions"
+    sortField="username" [sortOrder]="1"
+    selectionMode="single" [(selection)]="selectedSession" dataKey="username"
+    [(first)] = "first"
+    [lazy]="true"
+    [(totalRecords)] = "totalRecords"
+    [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,50]"
+    reorderableColumns="true"
+    scrollable="true" scrollHeight="100px"
+    resizableColumns="true"
+    (onLazyLoad)="ngOnLazyLoad($event)"
+  >
+    <p-column field="username" [header]="'SESSIONS-FORM.USERNAME' | translate" [sortable]="true" [filter]="true" [filterPlaceholder]="'SESSIONS-FORM.SEARCH' | translate" filterMatchMode="contains" [style]="{'width':'20%'}"></p-column>
+    <p-column field="firstName" [header]="'SESSIONS-FORM.FIRSTNAME' | translate"></p-column>
+    <p-column field="surname" [header]="'SESSIONS-FORM.SURNAME' | translate" [sortable]="true" ></p-column>
+    <p-column field="sessionBegin" [header]="'SESSIONS-FORM.SESSIONBEGIN' | translate" [sortable]="true" >
+      <ng-template let-col let-session="rowData" pTemplate="body">
+        {{session[col.field]|date:"dd-MM-yyyy hh:mm:ss" }}
+      </ng-template>
+    </p-column>
+    <p-column field="lastActivity" [header]="'SESSIONS-FORM.LASTACTIVITY' | translate" [sortable]="true" >
+      <ng-template let-col let-session="rowData" pTemplate="body">
+        {{session[col.field]|date:"dd-MM-yyyy hh:mm:ss" }}
+      </ng-template>
+    </p-column>
+  </p-dataTable>
+
+</p-panel>
+<p-growl [(value)]="msgs"></p-growl>

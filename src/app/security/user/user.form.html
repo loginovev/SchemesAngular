@@ -1,0 +1,74 @@
+<p-panel [header]="'USER-FORM.TITLE' | translate">
+
+  <div class="ui-g">
+    <div class="ui-g-9 ui-g-nopad">
+
+      <div class="ui-g">
+        <div class="ui-g-4 ui-lg-4 ui-sm-12">
+          <span class="ui-float-label">
+            <input id = 'inputUsername' type="text" pInputText [(ngModel)]="username" style="width: 100%"/>
+            <label for="inputUsername">{{'USER-FORM.USERNAME' | translate}}</label>
+          </span>
+        </div>
+        <div class="ui-g-4 ui-lg-4 ui-sm-12">
+          <span class="ui-float-label">
+            <input id = 'inputFirstName' type="text" pInputText [(ngModel)]="firstName" style="width: 100%"/>
+            <label for="inputFirstName">{{'USER-FORM.FIRSTNAME' | translate}}</label>
+          </span>
+        </div>
+        <div class="ui-g-4 ui-lg-4 ui-sm-12">
+          <span class="ui-float-label">
+            <input id = 'inputSurname' type="text" pInputText [(ngModel)]="surname" style="width: 100%"/>
+            <label for="inputSurname">{{'USER-FORM.SURNAME' | translate}}</label>
+          </span>
+        </div>
+      </div>
+
+      <div class="ui-g">
+        <div class="ui-g-4 ui-lg-4 ui-sm-12">
+          <span class="ui-float-label">
+            <input id = 'inputPassword' type="password" pPassword [(ngModel)]="password" style="width: 100%"/>
+            <label for="inputPassword">{{'USER-FORM.PASSWORD' | translate}}</label>
+          </span>
+        </div>
+        <div class="ui-g-4 ui-lg-4 ui-sm-12">
+          <span class="ui-float-label">
+            <input id = 'inputConfirmPassword' type="password" pPassword [(ngModel)]="confirmPassword" style="width: 100%"/>
+            <label for="inputConfirmPassword">{{'USER-FORM.CONFIRM-PASSWORD' | translate}}</label>
+          </span>
+        </div>
+        <div class="ui-g-4 ui-lg-4 ui-sm-12">
+          <p-checkbox [(ngModel)]="banned" [label]="'USER-FORM.BANNED' | translate" binary="true"></p-checkbox>
+        </div>
+      </div>
+
+      <div class="ui-g">
+        <div class="ui-g-4 ui-lg-4 ui-sm-12">
+          <label>{{'USER-FORM.THEMES' | translate}}:</label>
+          <p-dropdown [(ngModel)]="theme" [options]="themes"></p-dropdown>
+        </div>
+        <div class="ui-g-4 ui-lg-4 ui-sm-12">
+          <label>{{'USER-FORM.LANGUAGE' | translate}}:</label>
+          <p-dropdown [(ngModel)]="language" [options]="languages"></p-dropdown>
+        </div>
+        <div class="ui-g-4 ui-lg-4 ui-sm-12">
+
+        </div>
+      </div>
+
+    </div>
+    <div class="ui-g-3 ui-g-nopad">
+        <p-listbox [options]="roles" [(ngModel)]="selectedRoles" multiple="multiple" checkbox="checkbox" filter="filter" filterMode="startsWith" [style]="{'width':'100%'}"></p-listbox>
+    </div>
+  </div>
+
+  <p-toolbar>
+
+    <div class="ui-toolbar-group-right">
+      <button pButton type="button" [label]="'USER-FORM.OK' | translate" icon="fa-plus" (click)="OK($event)"></button>
+      <button pButton type="button" [label]="'USER-FORM.CANCEL' | translate" icon="fa-folder-open" class="ui-button-success" (click)="Cancel($event)"></button>
+    </div>
+  </p-toolbar>
+
+</p-panel>
+<p-growl [(value)]="msgs"></p-growl>

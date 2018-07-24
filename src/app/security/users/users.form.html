@@ -1,0 +1,38 @@
+<p-panel [header]="'USERS-FORM.TITLE' | translate">
+
+  <p-toolbar>
+
+    <div class="ui-toolbar-group-left">
+      <button pButton type="button" [label]="'USERS-FORM.NEW' | translate" icon="fa-plus" (click)="addUser($event)"></button>
+      <button pButton type="button" [label]="'USERS-FORM.OPEN' | translate" icon="fa-folder-open" class="ui-button-success" (click)="editUser($event)"></button>
+
+      <i class="fa fa-bars"></i>
+      <button pButton type="button" [label]="'USERS-FORM.DELETE' | translate" icon="fa-remove" class="ui-button-success" (click)="deleteUser($event)"></button>
+
+      <i class="fa fa-bars"></i>
+      <button pButton type="button" [label]="'USERS-FORM.UPDATE' | translate" icon="fa-refresh" class="ui-button-success" (click)="updateUsers()"></button>
+
+    </div>
+  </p-toolbar>
+
+
+  <p-dataTable
+    ngClass="ui-datatable"
+    [value]="users"
+    [(first)] = "first"
+    [lazy]="true"
+    [(totalRecords)] = "totalRecords"
+    selectionMode="single" [(selection)]="selectedUser" dataKey="username"
+    [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,50]"
+    reorderableColumns="true"
+    scrollable="true" scrollHeight="100px"
+    resizableColumns="true"
+    (onLazyLoad)="ngOnLazyLoad($event)"
+  >
+    <p-column field="username" [header]="'USERS-FORM.USERNAME' | translate" [sortable]="true" [filter]="true" [filterPlaceholder]="'USERS-FORM.SEARCH' | translate" filterMatchMode="startWith" [style]="{'width':'20%'}"></p-column>
+    <p-column field="firstName" [header]="'USERS-FORM.FIRSTNAME' | translate" [sortable]="true" ></p-column>
+    <p-column field="surname" [header]="'USERS-FORM.SURNAME' | translate" [sortable]="true" ></p-column>
+  </p-dataTable>
+
+</p-panel>
+<p-growl [(value)]="msgs"></p-growl>
