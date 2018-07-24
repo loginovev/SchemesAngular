@@ -1,0 +1,53 @@
+<p-panel [header]="'SCHEMES-FORM.TITLE' | translate">
+
+  <p-toolbar>
+
+    <div class="ui-toolbar-group-left">
+      <button pButton type="button" [label]="'SCHEMES-FORM.NEW' | translate" icon="fa-plus" (click)="addScheme($event)"></button>
+      <button pButton type="button" [label]="'SCHEMES-FORM.OPEN' | translate" icon="fa-folder-open" class="ui-button-success" (click)="editScheme($event)"></button>
+      <i class="fa fa-bars"></i>
+      <button pButton type="button" [label]="'SCHEMES-FORM.DELETE' | translate" icon="fa-remove" class="ui-button-success" (click)="deleteScheme($event)"></button>
+
+      <i class="fa fa-bars"></i>
+      <button pButton type="button" [label]="'SCHEMES-FORM.UPDATE' | translate" icon="fa-refresh" class="ui-button-success" (click)="ngOnLazyLoad()"></button>
+
+    </div>
+  </p-toolbar>
+
+  <div class="ui-g">
+    <div class="ui-g-3">
+
+      <p-dataTable
+        ngClass="ui-datatable"
+        [value]="schemeRows"
+        [(first)] = "first"
+        [lazy]="true"
+        [(totalRecords)] = "totalRecords"
+        selectionMode="single" [(selection)]="selectedRow" dataKey="id"
+        [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,50]"
+        reorderableColumns="true"
+        scrollable="true" scrollHeight="100px"
+        resizableColumns="true"
+        (onLazyLoad)="ngOnLazyLoad($event)"
+        (onRowSelect)="ngOnRowSelect($event)"
+      >
+        <p-column field="title" [header]="'SCHEMES-FORM.COLUMN-TITLE' | translate" [editable]="true" [sortable]="true" [filter]="true" [filterPlaceholder]="'SCHEMES-FORM.SEARCH' | translate" filterMatchMode="startWith"></p-column>
+        <p-column field="id" [hidden]="true"></p-column>
+      </p-dataTable>
+
+    </div>
+    <div class="ui-g-9">
+
+      <ang-scheme
+        [autoHeight]="true"
+        [bottomHeight]="40"
+        [readOnly]="true"
+      >
+
+      </ang-scheme>
+
+    </div>
+  </div>
+
+</p-panel>
+<p-growl [(value)]="msgs"></p-growl>

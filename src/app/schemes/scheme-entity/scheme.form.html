@@ -1,0 +1,25 @@
+<p-panel [header]="'SCHEME-FORM.TITLE' | translate">
+
+  <p-toolbar>
+
+    <div class="ui-toolbar-group-left">
+      <button pButton type="button" [label]="'SCHEME-FORM.OK' | translate" icon="fa-plus" (click)="OK($event)"></button>
+      <button pButton type="button" [label]="'SCHEME-FORM.CANCEL' | translate" icon="fa-folder-open" class="ui-button-success" (click)="Cancel($event)"></button>
+    </div>
+  </p-toolbar>
+
+  <span style="width:100%">
+      <label for="inputUsername">{{'SCHEME-FORM.SCHEME-TITLE' | translate}}:</label>
+      <input id = 'inputUsername' type="text" pInputText [(ngModel)]="title" style="width:70%"/>
+  </span>
+
+  <div id="schemeContainer">
+    <ang-scheme
+      id="ang-scheme-item"
+      [autoHeight]="true"
+      [bottomHeight]="20"
+    >
+    </ang-scheme>
+  </div>
+
+</p-panel>
