@@ -1,0 +1,5 @@
+<p-menubar [model]="items" [style.display]="isAuthenticated()">
+  <p-selectButton [options]="languages" [(ngModel)]="selectedLanguage" (onChange)="languageChange();updateOptions()"></p-selectButton>
+  <p-dropdown [options]="themes" [(ngModel)]="selectedTheme" [style]="{'width':'150px'}" (onChange)="themeChange($event);updateOptions()"></p-dropdown>
+  <button pButton [label]="'MAIN-MENU.LOGOUT' | translate" icon="fa-sign-out" (click)="logout($event)"></button>
+</p-menubar>
